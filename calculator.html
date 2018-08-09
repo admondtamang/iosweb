@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/apple.png" type="image/png">
+	<link rel="icon" href="img/apple.png" type="image/x-icon">
+
+	<title>Apple os</title>
+	<script>
+	function c(val)
+	{
+	    document.getElementById("d").value=val;
+	}
+	function math(val)
+	{
+	    document.getElementById("d").value+=val;
+	}
+	function e() 
+	{ 
+	    try 
+	    { 
+	      c(eval(document.getElementById("d").value)) 
+	    } 
+	    catch(e) 
+	    {
+	      c('Error') 
+	    } 
+	}
+</script>
+	
+</head>
+
+<body>
+	<main class="container">
+		<section class="display">
+			<input type="text" name="display" placeholder="0" value="" id="d" readonly>
+		</section>
+
+		<section class="button">	
+			<input type="button" name="btn" value="AC" class="btn btn-silver" onclick='c("")'>
+			<input type="button" name="btn" value="+/-" class="btn btn-silver">
+			<input type="button" name="btn" value="%" class="btn btn-silver" onclick='math("%")'>
+			<input type="button" name="btn" value="/" class="btn btn-orange" onclick='math("/")'>
+			<input type="button" name="btn" value="1" class="btn" onclick='math("1")'>
+			<input type="button" name="btn" value="2" class="btn" onclick='math("2")'>
+			<input type="button" name="btn" value="3" class="btn" onclick='math("3")'>
+			<input type="button" name="btn" value="*" class="btn btn-orange" onclick='math("*")'>
+			<input type="button" name="btn" value="4" class="btn" onclick='math("4")'>
+			<input type="button" name="btn" value="5" class="btn" onclick='math("5")'>
+			<input type="button" name="btn" value="6" class="btn" onclick='math("6")'>
+			<input type="button" name="btn" value="-" class="btn btn-orange" onclick='math("-")'>
+			<input type="button" name="btn" value="7" class="btn" onclick='math("7")'>
+			<input type="button" name="btn" value="8" class="btn" onclick='math("8")'>
+			<input type="button" name="btn" value="9" class="btn" onclick='math("9")'>
+			<input type="button" name="btn" value="+" class="btn btn-orange" onclick='math("+")'>
+			<input type="button" name="btn" value="0" class="btn btn-long" onclick='math("0")'>
+			<input type="button" name="btn" value="" class="btn btn-hidden">
+			<input type="button" name="btn" value="." class="btn" onclick='math(".")'>
+			<input type="button" name="btn" value="=" class="btn btn-orange" onclick='e()'>
+		</section>
+	</main>
+</body>
+</html>
